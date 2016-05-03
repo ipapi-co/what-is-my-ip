@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>What is my IP by ipapi-co</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>What is my IP</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/ipapi-co/what-is-my-ip">View the Project on GitHub <small>ipapi-co/what-is-my-ip</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ipapi-co/what-is-my-ip/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ipapi-co/what-is-my-ip/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ipapi-co/what-is-my-ip">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="find-your-public-external-ip-address-over-https---httpsipapico" class="anchor" href="#find-your-public-external-ip-address-over-https---httpsipapico" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Find your public (external) IP address over https - <a href="https://ipapi.co">https://ipapi.co</a>
+</h3>
+
+<h3>
+<a id="shell" class="anchor" href="#shell" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shell</h3>
+
+<div class="highlight highlight-source-shell"><pre>curl <span class="pl-s"><span class="pl-pds">'</span>https://ipapi.co/ip/<span class="pl-pds">'</span></span></pre></div>
+
+<h3>
+<a id="ruby" class="anchor" href="#ruby" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ruby</h3>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>net/http<span class="pl-pds">'</span></span>
+puts <span class="pl-c1">Net</span>::<span class="pl-c1">HTTP</span>.get(<span class="pl-c1">URI</span>(<span class="pl-s"><span class="pl-pds">'</span>https://ipapi.co/ip/<span class="pl-pds">'</span></span>))</pre></div>
+
+<h3>
+<a id="python" class="anchor" href="#python" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python</h3>
+
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> requests <span class="pl-k">import</span> get   
+<span class="pl-c1">print</span> get(<span class="pl-s"><span class="pl-pds">'</span>https://ipapi.co/ip/<span class="pl-pds">'</span></span>).text</pre></div>
+
+<h3>
+<a id="php" class="anchor" href="#php" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PHP</h3>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-c1">echo</span> <span class="pl-c1">file_get_contents</span>(<span class="pl-s"><span class="pl-pds">'</span>https://ipapi.co/ip/<span class="pl-pds">'</span></span>)</span></pre></div>
+
+<h3>
+<a id="nodejs" class="anchor" href="#nodejs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Node.js</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> https <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>https<span class="pl-pds">'</span></span>);
+
+<span class="pl-smi">https</span>.<span class="pl-en">get</span>(<span class="pl-s"><span class="pl-pds">'</span>https://ipapi.co/ip/<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">resp</span>){
+    <span class="pl-k">var</span> body <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+    <span class="pl-smi">resp</span>.<span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>data<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">data</span>){
+        body <span class="pl-k">+=</span> data;
+    });
+
+    <span class="pl-smi">resp</span>.<span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>end<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(){
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(body);
+    });
+});</pre></div>
+
+<h3>
+<a id="jquery" class="anchor" href="#jquery" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jQuery</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-en">get</span>(<span class="pl-s"><span class="pl-pds">'</span>https://ipapi.co/ip/<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">data</span>){
+  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data)
+})</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ipapi-co">ipapi-co</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

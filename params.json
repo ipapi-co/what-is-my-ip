@@ -1,0 +1,6 @@
+{
+  "name": "What is my IP",
+  "tagline": "",
+  "body": "\r\n\r\n### Find your public (external) IP address over https - [https://ipapi.co](https://ipapi.co)\r\n\r\n### Shell\r\n\r\n```bash\r\ncurl 'https://ipapi.co/ip/'\r\n```\r\n\r\n### Ruby\r\n\r\n```ruby\r\nrequire 'net/http'\r\nputs Net::HTTP.get(URI('https://ipapi.co/ip/'))\r\n```\r\n\r\n### Python\r\n\r\n```python\r\nfrom requests import get   \r\nprint get('https://ipapi.co/ip/').text\r\n```\r\n\r\n### PHP\r\n\r\n```php\r\necho file_get_contents('https://ipapi.co/ip/')\r\n```\r\n\r\n### Node.js\r\n\r\n```javascript\r\nvar https = require('https');\r\n\r\nhttps.get('https://ipapi.co/ip/', function(resp){\r\n    var body = ''\r\n    resp.on('data', function(data){\r\n        body += data;\r\n    });\r\n\r\n    resp.on('end', function(){\r\n        console.log(body);\r\n    });\r\n});\r\n```\r\n\r\n### jQuery\r\n\r\n```javascript\r\n$.get('https://ipapi.co/ip/', function(data){\r\n  console.log(data)\r\n})\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
